@@ -1,4 +1,4 @@
-export class User{
+export class Student{
     id: number;
     userName: string;
     creationDate: Date;

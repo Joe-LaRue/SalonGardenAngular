@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { User } from '../model';
+import { Student } from '../model';
 
 @Component({
   selector: 'student-list',
@@ -8,7 +8,7 @@ import { User } from '../model';
 })
 export class StudentListComponent  {
 
-  users: User[] = [
+  users: Student[] = [
     {
       id: 1,
       creationDate: new Date('1/1/2018'),
