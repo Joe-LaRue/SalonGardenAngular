@@ -1,4 +1,32 @@
-<student-list></student-list>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">SalonGarden</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/students" routerLinkActive="active">Students</a>
+        <a class="nav-item nav-link" routerLink="/techniques" routerLinkActive="active">Techniques</a>
+        <a class="nav-item nav-link" routerLink="/evaluations" routerLinkActive="active">Evaluations</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+<!-- 
+
+<div class="row">
+    <div class="col-md-6">
+        <h3>Students</h3>
+        <student-list></student-list>
+    </div>
+    <div class="col-md-6"></div>
+</div> -->
+
+
+
   
 
-<router-outlet></router-outlet>
+

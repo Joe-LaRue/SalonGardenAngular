@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
-import { User } from './model';
+import { User } from '../model';
 
 @Component({
   selector: 'student-list',
-  templateUrl: './student-list.component.html',
-  styleUrls: ['./student-list.component.css']
+  templateUrl: './student-list.component.html'
 })
 export class StudentListComponent  {
 
