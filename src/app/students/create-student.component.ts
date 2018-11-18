@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { StudentDetailComponent } from './student-detail.component';
+import {  Router } from "@angular/router";
+
 import { Student } from '../model';
+import { StudentDataService } from '../services/studentData.service';
 
 @Component({
   selector: 'app-create-student',
@@ -12,7 +14,12 @@ export class CreateStudentComponent implements OnInit {
   student: Student = new Student;
 
   createStudent(){
-    console.log(this.student);
+    this.studentDataService.addStudent(this.student);
+    this.router.navigate(['/', 'students']);
+  }
+
+  constructor(private studentDataService : StudentDataService, private router : Router){
+
   }
 
   ngOnInit() {

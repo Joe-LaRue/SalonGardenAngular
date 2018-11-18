@@ -1,19 +1,23 @@
 
 <h3>Create Student</h3>
 
-<div class="form-group">
-  <label for="firstName">First Name</label>
-  <input type="text" name="firstName" id="txtFirstName" class="form-control" [(ngModel)]="student.firstName">
+<div class="row">
+  <div class="col-4">
+      <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" name="firstName" id="txtFirstName" class="form-control" [(ngModel)]="student.firstName">
+        </div>
+        
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" name="lastName" id="txtlastName" class="form-control" [(ngModel)]="student.lastName">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="txtEmail" class="form-control" [(ngModel)]="student.email">
+        </div>
+        
+        <button class="btn btn-primary" (click)="createStudent()">Create</button>
+  </div>
 </div>
-
-<div class="form-group">
-  <label for="lastName">Last Name</label>
-  <input type="text" name="lastName" id="txtlastName" class="form-control" [(ngModel)]="student.lastName">
-</div>
-
-<div class="form-group">
-  <label for="email">Email</label>
-  <input type="text" name="email" id="txtEmail" class="form-control" [(ngModel)]="student.email">
-</div>
-
-<button class="btn btn-primary" (click)="createStudent()">Create</button>

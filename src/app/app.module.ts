@@ -9,6 +9,8 @@ import { TechniqueListComponent } from './techniques/technique-list.component';
 import { EvaluationListComponent } from './evaluations/evaluation-list.component';
 import { StudentDetailComponent } from './students/student-detail.component';
 import { CreateStudentComponent } from './students/create-student.component';
+import { StudentDataService } from './services/studentData.service';
+import { LoggerService } from './services/logger.service';
 
 
 @NgModule({
@@ -25,7 +27,7 @@ import { CreateStudentComponent } from './students/create-student.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [StudentDataService, LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
