@@ -3,11 +3,11 @@ import { Student } from "../model";
 export function getTestStudents() : Student[]{
     return [{
         id: 1,
-        creationDate: new Date('1/1/2018'),
+        creationDate: new Date('1/1/2018'), 
         email: 'joe@email.com',
         firstName: 'Joe',
         lastName: 'LaRue',
-        roleId: 1,
+        phase: 1,
         userName: 'jlarue',
         password: 'password'  
       },
@@ -17,7 +17,7 @@ export function getTestStudents() : Student[]{
         email: 'colleen@email.com',
         firstName: 'Colleen',
         lastName: 'LaRue',
-        roleId: 1,
+        phase: 1,
         userName: 'clarue',
         password: 'password'  
       },
@@ -27,7 +27,7 @@ export function getTestStudents() : Student[]{
         email: 'jj@email.com',
         firstName: 'JJ',
         lastName: 'LaRue',
-        roleId: 1,
+        phase: 1,
         userName: 'jjlarue',
         password: 'password'  
       },
@@ -37,7 +37,7 @@ export function getTestStudents() : Student[]{
         email: 'jenna@email.com',
         firstName: 'jenna',
         lastName: 'LaRue',
-        roleId: 1,
+        phase: 1,
         userName: 'jennalarue',
         password: 'password'  
       }];

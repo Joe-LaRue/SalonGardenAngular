@@ -21,6 +21,20 @@ export class StudentDataService {
 
   addStudent(student : Student){
     this.logger.log(`adding student to repository`);
+    student.id = this.students.length + 1
+    this.students.push(student);
+    this.logger.log(`student repository now has ${this.students.length} students`);
+  }
+
+  createStudent(firstName: string, lastName: string, email: string){
+    this.logger.log(`adding student to repository`);
+    let student = new Student();
+    student.firstName = firstName;
+    student.lastName = lastName;
+    student.email = email; 
+    student.id = this.students.length + 1;
+    student.phase = 1;
+
     this.students.push(student);
     this.logger.log(`student repository now has ${this.students.length} students`);
   }

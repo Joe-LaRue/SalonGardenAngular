@@ -7,7 +7,7 @@ export class Student{
     firstName: string;
     lastName: string;
     lastLogon?: Date;
-    roleId: number;    
+    phase: number;    
 }
 
 export class Role{

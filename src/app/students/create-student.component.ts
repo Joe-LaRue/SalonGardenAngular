@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {  Router } from "@angular/router";
+import { Router } from "@angular/router";
 
-import { Student } from '../model';
 import { StudentDataService } from '../services/studentData.service';
 
 @Component({
@@ -11,14 +10,18 @@ import { StudentDataService } from '../services/studentData.service';
 })
 export class CreateStudentComponent implements OnInit {
 
-  student: Student = new Student;
+  firstName: string;
+  lastName: string;
+  email: string;
 
-  createStudent(){
-    this.studentDataService.addStudent(this.student);
+
+  createStudent() {
+    console.log('create student');
+    this.studentDataService.createStudent(this.firstName, this.lastName, this.email);
     this.router.navigate(['/', 'students']);
   }
 
-  constructor(private studentDataService : StudentDataService, private router : Router){
+  constructor(private studentDataService: StudentDataService, private router: Router) {
 
   }
 
