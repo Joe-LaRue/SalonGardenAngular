@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Student } from '../model';
-import { getTestStudents } from './test-students';
+import { getTestStudents } from './test-data';
 import { LoggerService } from './logger.service';
 
 @Injectable({

@@ -1,4 +1,4 @@
-import { Student } from "../model";
+import { Student, TechniqueType, Technique } from "../model";
 
 export function getTestStudents() : Student[]{
     return [{
@@ -41,4 +41,20 @@ export function getTestStudents() : Student[]{
         userName: 'jennalarue',
         password: 'password'  
       }];
+}
+
+export function getTestTechniqueTypes() : TechniqueType[]{
+  return [
+    new TechniqueType(1, "Cut"),
+    new TechniqueType(2, "Color"),
+    new TechniqueType(3, "Style")
+  ];
+}
+
+export function getTestTechniques() : Technique[]{
+  return [
+    new Technique(1, "Scissor Over Comb", new TechniqueType(1, "Cut")),
+    new Technique(2, "Vertical Foil", new TechniqueType(2, "Color")),
+    new Technique(3, "Updo", new TechniqueType(3, "Style"))
+  ];
 }

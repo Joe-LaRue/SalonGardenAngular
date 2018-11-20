@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Technique } from '../model';
+import { TechniqueDataService } from '../services/techniqueDataService';
 
 @Component({
   selector: 'app-technique-list',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechniqueListComponent implements OnInit {
 
-  constructor() { }
+  techniques: Technique[];
+  constructor(private techniqueDataService : TechniqueDataService) { }
 
   ngOnInit() {
+    this.techniques = this.techniqueDataService.getTechniques();
   }
 
 }

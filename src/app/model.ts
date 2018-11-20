@@ -16,12 +16,11 @@ export class Role{
 }
 
 export class Technique{
-    id: number;
-    description: string;
-    techniqueType: TechniqueType;
+    constructor(public id: number, public description: string, public techniqueType: TechniqueType) {
+    }
 }
 
-export class TechniqueType{
-    id: number;
-    description: string;
+export class TechniqueType{    
+    constructor(public id: number, public description: string) {
+    }
 }
