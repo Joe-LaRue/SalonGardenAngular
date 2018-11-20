@@ -16,6 +16,10 @@ export class TechniqueDataService {
     return this.techniques;
   }
 
+  getTechniqueTypes() : TechniqueType[] {
+    return this.techniqueTypes;
+  }
+
   getTechniquesByTypeId(techniqueTypeId : number) : Technique[] {
     return this.techniques.filter(x => x.techniqueType.id === techniqueTypeId);;
   }

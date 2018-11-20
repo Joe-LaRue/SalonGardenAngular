@@ -11,6 +11,7 @@ import { StudentDetailComponent } from './students/student-detail.component';
 import { CreateStudentComponent } from './students/create-student.component';
 import { StudentDataService } from './services/studentData.service';
 import { LoggerService } from './services/logger.service';
+import { CreateTechniqueComponent } from './techniques/create-technique.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { LoggerService } from './services/logger.service';
     TechniqueListComponent,
     EvaluationListComponent,
     StudentDetailComponent,
-    CreateStudentComponent
+    CreateStudentComponent,
+    CreateTechniqueComponent
   ],
   imports: [
     BrowserModule,
