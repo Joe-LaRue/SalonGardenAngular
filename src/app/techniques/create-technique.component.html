@@ -12,6 +12,7 @@
         <div class="form-group">
           <label>Type</label>
           <select required [(ngModel)]="techniqueTypeId" class="form-control" name="techniqueType" >
+            <option [selected]="true" value="-1">Select</option>
             <option *ngFor="let techType of techniqueTypes" [value]="techType.id">{{techType.description}}</option>
           </select>
         </div>

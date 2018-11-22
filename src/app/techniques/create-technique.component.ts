@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TechniqueDataService } from '../services/techniqueDataService';
 import { TechniqueType } from '../model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'create-technique',
@@ -12,15 +13,15 @@ export class CreateTechniqueComponent implements OnInit {
   description: string;
   techniqueTypeId : number;
 
-  constructor(private techniqueDataService: TechniqueDataService) { }
+  constructor(private techniqueDataService: TechniqueDataService, private router: Router) { }
 
   ngOnInit() {
     this.techniqueTypes = this.techniqueDataService.getTechniqueTypes();
   }
 
   createTechnique(){
-    console.log(this.description);
-    console.log(this.techniqueTypeId);
+    this.techniqueDataService.createTechnique(this.description, this.techniqueTypeId);
+    this.router.navigate(['/', 'techniques']);
   }
 
 }
